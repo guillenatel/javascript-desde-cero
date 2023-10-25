@@ -1,13 +1,27 @@
 function cantidadDeVocales(phrase){
 // Cuenta la cantidad de vocales en la frase pasada por parametros utilizando un bucle for
 // Tu código:👇
+let suma= 0;
 
+for (let i = 0; i < phrase.length; i++) {
+    if (phrase[i] === "A" || phrase[i] === "a" || phrase[i] === "E" || phrase[i] === "e" || phrase[i] === "I" || phrase[i] === "i" ||
+    phrase[i] === "O" || phrase[i] === "o" || phrase[i] === "U" || phrase[i] === "u"){
+        console.log(phrase[i]); 
+        suma++; 
+    }
+}
+return suma; 
 }
 
 function primerDivisible(divisor, dividendo) {
 // Encuentra el primer número divisible por 'num' a partir de un número dado utilizando un bucle while
 // Tu código:👇
+let aux = divisor
 
+while(aux <= dividendo){
+    if(dividendo % aux === 0) return aux
+    aux++
+    }
 }
 
 
