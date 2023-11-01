@@ -29,21 +29,31 @@ function encuentraX(x){
 //Realiza un algoritmo que recorre numeros del 1 al 100, cuando pase por el numero X pasado por parametros
 // retornar "El numero X es: ..."
 // Tu Código:👇
-
+for (let i = 1; i <= 100; i++) {
+    if(i === x){
+        return ("El numero X es: " + i);
+    }
+}
 }
 
 function sumandoTodo(num){
 // Realiza un algoritmo que el cual recorra del 0 al numero pasado por parametros, debes retornar la suma de todo los
 // numeros que se recorrio
 // Tu código:👇
-
+let suma = 0; 
+for (let i = 0; i <= num; i++) {
+    suma += i; 
+}
+return suma; 
 }
 
 function BinarioADecimal(num) {
 // La funcion recibe por parametro, un numero binario pero en tipo de dato String
 // debes tomar este numero binario y ayudandote de un bucle pasarlo a binario
 // tu código:👇
-
+while () {
+    
+}
 }
 
 function Fibonacci(n){

@@ -45,6 +45,7 @@ function valorMaximo(arr){
     //Se pasa un array de enteros, tendras que iterar por cada elemeto del array y encontrar el valor más alto y devolverlo
     //ejemplo -> [1 , 5, 4, 10, 99 ,2, 42, 3] - deberia devolver 99
     // Tu codigo:
+   //consejo tratar de hacerlo solo, si no buscan un metodo 
 
 }
 
