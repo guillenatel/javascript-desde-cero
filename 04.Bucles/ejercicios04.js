@@ -51,16 +51,38 @@ function BinarioADecimal(num) {
 // La funcion recibe por parametro, un numero binario pero en tipo de dato String
 // debes tomar este numero binario y ayudandote de un bucle pasarlo a binario
 // tu código:👇
-while () {
-    
+var decimal = 0; 
+
+for (var i = 0; i < num.length; i++) {
+    //Obtener el digito binario en la posicion i
+    var digito = parseInt(num.charAt(i));
+
+    if (digito !== 0 && digito !== 1) {
+        return "Número binario no válido";
+    }
+    // Calcular la contribución de este dígito a la representación decimal
+    var contribucion = digito * Math.pow(2, num.length - 1 - i);
+    decimal += contribucion;
 }
+return decimal;
 }
+
+
 
 function Fibonacci(n){
 // Realiza una secuencia Fibonacci con el indice pasado por paramentro
 // Se puede representar mediante la siguiente fórmula: F(n) = F(n-1) + F(n-2)
 // Tu código:👇
+    var resultado = 0;
+    var fib= [0,1]; 
 
+    for (let i = 2; i < n; i++) {
+        fib[i]= fib[i-1] + fib[i-2];
+    }
+    fib.slice(0,n+1) ; 
+
+    resultado = fib[fib.length - 1] + fib[fib.length - 2];
+    return resultado; 
 }
 
 function esPrimo(numero) {
@@ -69,15 +91,29 @@ function esPrimo(numero) {
 //Si el numero pasado es primo devolve: numero " es primo." , caso contrario: numero " no es primo."
 // Tu código:👇
 
+if( numero=== 1 || numero === 0 || numero === 4) return numero + " no es primo."; 
+
+// colocamos la raiz cuadrada como limite superior en el bucle, asi optimizar la busqueda de divisores 
+for (let i = 2; i <= Math.sqrt(numero); i++) {
+    if(numero %  i == 0) return  numero + " no es primo.";
 }
+return numero + " es primo."; 
+}
+
 
 function invertirCadena(cadena) {
 //La función toma una cadena de texto como parámetro, devuelve la cadena invertida.
 //Ejemplo: 'Hola' -> devolver 'aloH'
 //Tu codigo:👇
 
+var cadenaInvertida = ""; 
+
+for (let i = cadena.length - 1; i >= 0; i--) {
+    cadenaInvertida += cadena.charAt(i); 
 }
-  
+return cadenaInvertida; 
+}
+
 module.exports = {
     encuentraX,
     sumandoTodo,
