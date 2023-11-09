@@ -51,17 +51,17 @@ function BinarioADecimal(num) {
 // La funcion recibe por parametro, un numero binario pero en tipo de dato String
 // debes tomar este numero binario y ayudandote de un bucle pasarlo a binario
 // tu código:👇
-var decimal = 0; 
+let decimal = 0; 
 
-for (var i = 0; i < num.length; i++) {
+for (let i = 0; i < num.length; i++) {
     //Obtener el digito binario en la posicion i
-    var digito = parseInt(num.charAt(i));
+    let digito = parseInt(num.charAt(i));
 
     if (digito !== 0 && digito !== 1) {
         return "Número binario no válido";
     }
     // Calcular la contribución de este dígito a la representación decimal
-    var contribucion = digito * Math.pow(2, num.length - 1 - i);
+    let contribucion = digito * Math.pow(2, num.length - 1 - i);
     decimal += contribucion;
 }
 return decimal;
@@ -73,8 +73,8 @@ function Fibonacci(n){
 // Realiza una secuencia Fibonacci con el indice pasado por paramentro
 // Se puede representar mediante la siguiente fórmula: F(n) = F(n-1) + F(n-2)
 // Tu código:👇
-    var resultado = 0;
-    var fib= [0,1]; 
+    let resultado = 0;
+    let fib= [0,1]; 
 
     for (let i = 2; i < n; i++) {
         fib[i]= fib[i-1] + fib[i-2];
@@ -106,7 +106,7 @@ function invertirCadena(cadena) {
 //Ejemplo: 'Hola' -> devolver 'aloH'
 //Tu codigo:👇
 
-var cadenaInvertida = ""; 
+let cadenaInvertida = ""; 
 
 for (let i = cadena.length - 1; i >= 0; i--) {
     cadenaInvertida += cadena.charAt(i); 
