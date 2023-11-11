@@ -60,7 +60,7 @@ describe('verificarPassword', () => {
     const objectOne = { usuario: 'Avleo', password: "no se que poner :(", email: 'leoavila123@gmail.com'} 
     const objectTwo = { usuario: 'Avleo', password: 'hola', email: 'leoavila123@gmail.com'} 
     expect(verificarPassword(objectOne)).toEqual(true);
-    expect(verificarPassword(objectTwo)).toEqual('Porfavor, pon una contraseña más segura');
+    expect(verificarPassword(objectTwo)).toEqual('Por favor, pon una contraseña más segura');
   });
 });
 
