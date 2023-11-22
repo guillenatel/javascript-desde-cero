@@ -22,4 +22,4 @@
     - **Proyectos:** Agrega una sección para mostrar tus proyectos más relevantes. Incluye una breve descripción y, si es posible, imágenes de los proyectos. Puedes usar la etiqueta **`<a>`** para enlazar a los proyectos en línea.
         
         
-4. En el pie de página, agrega tus datos de contacto, como tu dirección de correo electrónico y enlaces a tus redes sociales o perfiles profesionales (por ejemplo, LinkedIn, GitHub, Behance, etc.).
+4. En el pie de página, agrega tus datos de contacto, como tu dirección de correo electrónico y enlaces a tus redes sociales o perfiles profesionales (por ejemplo, LinkedIn, GitHub, Behance, etc.).   
