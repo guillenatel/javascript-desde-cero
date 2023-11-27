@@ -11,7 +11,7 @@ const {
     
 } = require('../07.Funciones/ejercicios07.js')
 
-describe('Bienvenida', () =>{
+describe('bienvenida', () =>{
     it('La función creada debe retornar el saludo de bienvenida', () =>{
         expect(bienvenida("Leonardo", 'Avila')).toBe("Bienvenido Leonardo Avila")
         expect(bienvenida("Pablo", 'Perez')).toBe("Bienvenido Pablo Perez")
@@ -19,7 +19,7 @@ describe('Bienvenida', () =>{
     })
 })
 
-describe('Calc', () =>{
+describe('calc', () =>{
     it('La funcion creada deberia actuar como calculadora', () =>{
         expect(calc(1, "+", 2)).toEqual(3)
         expect(calc(2, "-", 1)).toEqual(1)
