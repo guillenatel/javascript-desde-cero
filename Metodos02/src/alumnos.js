@@ -27,7 +27,11 @@ let addColumn = false; // Variable que debe cambiar según -> Si existe la 4 col
 // BOTON DATOS ALUMNO => Deberia devolver la tabla de alumnos con los datos personales de cada alumno (nombre, apellido, dni).
 const btnDate = () =>{ 
 
-    deleteColumn(); 
+    thridColumn.innerHTML = " ";
+    thridColumn.innerHTML = "DNI";
+
+   deleteColumn(); 
+    
     bodyTableAlumnos.innerHTML = " "; 
 
         alumnos.forEach(alumno => {
@@ -38,7 +42,7 @@ const btnDate = () =>{
             <td>${alumno.dni}</td>
         </tr>`
 })
-thridColumn.innerText = "DNI"
+
 }
 
     
@@ -46,7 +50,11 @@ thridColumn.innerText = "DNI"
 // BOTON PROMEDIOS => Deberia devolver la tabla de alumnos con el promedio de cada alumno, este consta en 3 notas (examen1, examen2, examen3).
 const btnPromedios = () => {
 
+    thridColumn.innerHTML = " ";
+    thridColumn.innerHTML = "Promedios";
+
     deleteColumn(); 
+
     let promedio; 
     bodyTableAlumnos.innerHTML = " "; 
 
@@ -59,7 +67,6 @@ const btnPromedios = () => {
             <td>${promedio}</td>
         </tr>`
 })
-thridColumn.innerText = "Promedios";  
 }
 
 
@@ -68,7 +75,12 @@ thridColumn.innerText = "Promedios";
 // *la columna se deberá eliminar si se selecciona otro boton
 const btnAsistencia = () => {
 
+    thridColumn.innerHTML = " ";
+    thridColumn.innerHTML = "Asistencias";
+
     deleteColumn(); 
+    addColumn= true; 
+
     bodyTableAlumnos.innerHTML = " "; 
 
     alumnos.forEach(alumno => {
@@ -81,9 +93,7 @@ const btnAsistencia = () => {
             <td>${promedioAsis}%</td>
         </tr>`
 })
-thridColumn.innerText = "Asistencia"; 
 headerTable.innerHTML += `<th id= delete>%</th>`;
-addColumn= true; 
 }
 
 
@@ -92,6 +102,9 @@ addColumn= true;
 // BOTON APROBADOS => - Deberia devolver la tabla de alumnos en ella solo aquellos que tengan aprobado el cursado, en base a las siguientes condiciones:
 // Un promedio ≥ 70 y un porcentaje de asistencia ≥ 70
 const btnAprobados = () => {
+
+    thridColumn.innerHTML = " ";
+    thridColumn.innerHTML = "Aprobados"; 
 
     deleteColumn(); 
     bodyTableAlumnos.innerHTML = " "; 
@@ -106,20 +119,21 @@ const btnAprobados = () => {
         ` <tr>
             <td>${alumno.nombre}</td>
             <td>${alumno.apellido}</td>
-            <td>${promedio}</td>
+            <td>Aprobado</td>
         </tr>`
-        }
-        
+        }  
 })
-thridColumn.innerText = "Aprobados"; 
 }
 
 
 // Deberia devolver la tabla de alumnos con aquellos que no aprobaron el cursado.
 const btnReprobados = () => {
 
+    thridColumn.innerHTML = " ";
+    thridColumn.innerHTML = "Reprobados";
+    
     deleteColumn(); 
-    bodyTableAlumnos.innerHTML = " "; 
+    
 
     alumnos.forEach(alumno => {
 
@@ -131,13 +145,11 @@ const btnReprobados = () => {
         ` <tr>
             <td>${alumno.nombre}</td>
             <td>${alumno.apellido}</td>
-            <td>${promedio}</td>
+            <td>Reprobado</td>
         </tr>`
         }
         
 })
-thridColumn.innerText = "Reprobados"; 
-
 }
 
 
@@ -151,4 +163,7 @@ const deleteColumn = () => {
         addColumn = false;
     }
 }
+
+
+
 

@@ -3,7 +3,7 @@
 const peliculas = [
     {titulo: "Titanic",año: 1997,produccion: "Estados Unidos",genero: "Drama",estreno: false, img:'./src/img/titanic.jpg'},
     {titulo: "Inception",año: 2010,produccion: "Estados Unidos",genero: "Ciencia ficción",estreno: false, img:'./src/img/Inception.jpg'},
-    {titulo: "The 'odfather",año: 1972,produccion: "Estados Unidos",genero: "Crimen",estreno: false, img:"/src/img/thegodfather.jpg"},
+    {titulo: "The 'odfather",año: 1972,produccion: "Estados Unidos",genero: "Crimen",estreno: false, img:"./src/img/thegodfather.jpg"},
     {titulo: "The Shawshank Redemption",año: 1994,produccion: "Estados Unidos",genero: "Drama",estreno: false, img:"./src/img/shawshank.jpg"},
     {titulo: "Oppenheimer",año: 2023 ,produccion: "Estados Unidos",genero: "Drama",estreno: true, img:"./src/img/oppenheimer.jpg"},
     {titulo: "My Adventures with Superman",año: 2023,produccion: "Estados Unidos",genero: "Acción",estreno: true, img:"./src/img/my_adventures_with_superman.jpg"},
@@ -22,29 +22,94 @@ const pelis = document.querySelector('.peli') // Obtenemos sección de pelis. do
 //BOTON TODOS => Debe devolver todas las portadas (img) de las peliculas que hay.
 const allFilms = () => {
 
+    pelis.innerHTML= " ";
+
+    peliculas.forEach(pelicula =>{
+        let imagenes = document.createElement("img"); 
+        imagenes.src = pelicula.img;
+        imagenes.alt = pelicula.titulo;
+
+    pelis.appendChild(imagenes); 
+
+    });
 }
 
 //BOTON ESTRENOS => Debe devolver las portadas (img) solo de las peliculas que esten en estreno 'estreno: true'
 const estrenos = () => {
+
+    pelis.innerHTML= " ";
+
+    peliculas.forEach(pelicula =>{
+        let imagenes = document.createElement("img"); 
+        imagenes.src = pelicula.img;
+        imagenes.alt = pelicula.titulo;
+
+        if(pelicula.estreno === true){
+            pelis.appendChild(imagenes);
+        }
+    });
 
 }
 
 //BOTON ACCION => Debe devolver solo aquellas peliculas que contengan como genero ‘Acción’.
 const accion = () => {
 
+    pelis.innerHTML= " ";
+
+    peliculas.forEach(pelicula =>{
+        let imagenes = document.createElement("img"); 
+        imagenes.src = pelicula.img;
+        imagenes.alt = pelicula.titulo;
+
+        if(pelicula.genero === "Acción"){
+            pelis.appendChild(imagenes);
+        }
+    });
 }
 
 //BOTON DRAMA => Debe devolver solo aquellas peliculas que contengan como genero ‘Drama’.
 const drama = () => {
+    pelis.innerHTML= " ";
 
+    peliculas.forEach(pelicula =>{
+        let imagenes = document.createElement("img"); 
+        imagenes.src = pelicula.img;
+        imagenes.alt = pelicula.titulo;
+
+        if(pelicula.genero === "Drama"){
+            pelis.appendChild(imagenes);
+        }
+    });
 }
 
 //BOTON CRIMEN => Debe devolver solo aquellas peliculas que contengan como genero ‘Crimen’.
 const crimen = () => {
+    pelis.innerHTML= " ";
+
+    peliculas.forEach(pelicula =>{
+        let imagenes = document.createElement("img"); 
+        imagenes.src = pelicula.img;
+        imagenes.alt = pelicula.titulo;
+
+        if(pelicula.genero === "Crimen"){
+            pelis.appendChild(imagenes);
+        }
+    });
 
 }
 
 //BOTON TODOS => debe devolver aquellas peliculas que NO estén dentro de los generos anteriores.
 const otros = () => {
+    pelis.innerHTML= " ";
+
+    peliculas.forEach(pelicula =>{
+        let imagenes = document.createElement("img"); 
+        imagenes.src = pelicula.img;
+        imagenes.alt = pelicula.titulo;
+
+        if(!(pelicula.genero === "Drama") && !(pelicula.genero === "Acción") && !(pelicula.genero === "Crimen")){
+            pelis.appendChild(imagenes);
+        }
+    });
 
 }
