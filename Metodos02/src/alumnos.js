@@ -28,7 +28,7 @@ let addColumn = false; // Variable que debe cambiar según -> Si existe la 4 col
 const btnDate = () =>{ 
 
     thridColumn.innerHTML = " ";
-    thridColumn.innerHTML = "DNI";
+    document.querySelector('#thrid-column').innerHTML = "DNI";
 
    deleteColumn(); 
     
@@ -51,7 +51,7 @@ const btnDate = () =>{
 const btnPromedios = () => {
 
     thridColumn.innerHTML = " ";
-    thridColumn.innerHTML = "Promedios";
+    document.querySelector('#thrid-column').innerHTML = "Promedios";
 
     deleteColumn(); 
 
@@ -76,7 +76,7 @@ const btnPromedios = () => {
 const btnAsistencia = () => {
 
     thridColumn.innerHTML = " ";
-    thridColumn.innerHTML = "Asistencias";
+    document.querySelector('#thrid-column').innerHTML = "Asistencias";
 
     deleteColumn(); 
     addColumn= true; 
@@ -104,7 +104,7 @@ headerTable.innerHTML += `<th id= delete>%</th>`;
 const btnAprobados = () => {
 
     thridColumn.innerHTML = " ";
-    thridColumn.innerHTML = "Aprobados"; 
+    document.querySelector('#thrid-column').innerHTML = "Aprobados"; 
 
     deleteColumn(); 
     bodyTableAlumnos.innerHTML = " "; 
@@ -130,10 +130,10 @@ const btnAprobados = () => {
 const btnReprobados = () => {
 
     thridColumn.innerHTML = " ";
-    thridColumn.innerHTML = "Reprobados";
+    document.querySelector('#thrid-column').innerHTML = "Reprobados";
     
     deleteColumn(); 
-    
+    bodyTableAlumnos.innerHTML = " "; 
 
     alumnos.forEach(alumno => {
 
